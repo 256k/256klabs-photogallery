@@ -44,6 +44,6 @@ cp ./templates/style.css ./dist/style.css
 git add .
 git commit -m "$dt"
 git push
-
+git subtree push --prefix dist origin gh-pages
 echo "done."
 
