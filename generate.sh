@@ -31,7 +31,7 @@ cp -r "./images" "./dist/images"
 touch tmp.html
 
 cat ./templates/htmltop.html > tmp.html
-find ./dist/images -type f | grep -E '\.(webp|jpg|png|gif)$' | while read -r imagepath; do
+find ./images -type f | grep -E '\.(webp|jpg|png|gif)$' | while read -r imagepath; do
   echo "<li class='photo-item'><img class='photo-img' src='$imagepath'/></li>" >> tmp.html
 done
 
@@ -45,5 +45,6 @@ git add .
 git commit -m "$dt"
 git push
 git subtree push --prefix dist origin gh-pages
+
 echo "done."
 
