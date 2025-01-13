@@ -31,7 +31,7 @@ cp -r "./images" "./dist/images"
 touch tmp.html
 
 cat ./templates/htmltop.html > tmp.html
-find ./images -type f | grep -E '\.(webp|jpg|png|gif)$' | while read -r imagepath; do
+find ./dist/images -type f | grep -E '\.(webp|jpg|png|gif)$' | while read -r imagepath; do
   echo "<li class='photo-item'><img class='photo-img' src='$imagepath'/></li>" >> tmp.html
 done
 
